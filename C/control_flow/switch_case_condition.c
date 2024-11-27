@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#if 1
 int main(int argc, char const *argv[]) {
     const int8_t status = 2;
 
@@ -19,4 +18,3 @@ int main(int argc, char const *argv[]) {
 
     return 0;
 }
-#endif
