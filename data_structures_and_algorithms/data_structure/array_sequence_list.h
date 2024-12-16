@@ -1,6 +1,5 @@
 /*
-使用 array 实现顺序表，也就是 arrayList
-也可以叫 SequenceList
+使用 array 实现顺序表，也就是 arrayList 也可以叫 SequenceList
 
 线性表连续春初空间可以使用静态的数组实现，也可以使用动态内存实现
 
