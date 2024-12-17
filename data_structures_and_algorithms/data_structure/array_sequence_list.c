@@ -70,6 +70,7 @@ int destroy(ArraySequenceList *array_sequence_list) {
         exit(EXIT_FAILURE);
     } else {
         free(element_ptr);
+        element_ptr == NULL;
     }
     return 0;
 }
