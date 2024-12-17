@@ -12,9 +12,15 @@
 单链表的第一个节点，也就是首节点
 单链表的最后一个节点，也就是尾节点，指针域是指向 NULL 的
 
-单链表又分为正常链表和带头链表
-
-先实现的是正常链表
+实现的 API
+0. 初始化，返回头节点
+1. 头插入，无返回
+2. 尾插入，无返回
+3. 删除，返回布尔值，是否成功
+4. 查找，返回节点
+5. 遍历，无返回，会打印
+6. 长度，返回长度
+7. 是否为空，返回布尔值，是否为空
 */
 
 void test(void) {
@@ -83,10 +89,10 @@ void insert_last(Node **head, element_type element) {
     if (head == NULL) {       // 如果没有节点，那就是第一个节点了
         *head = new_node;
     } else {
-        // 新建一个尾节点临时变量，并赋值给头节点，从头节点开始找是否是尾节点
+        // 新建一个临时变量，并把头节点地址赋值给临时的变量，从头节点开始找是否是尾节点
         Node *last_node = *head;
         while (last_node->next != NULL) {
-            last_node = last_node->next;
+            last_node = last_node->next;    // 往下找
         }
         // 找到了尾节点，进行操作
         last_node->next = new_node;
@@ -134,7 +140,7 @@ Node *search_node(Node *head, element_type key) {
 
 void traversal(Node *head) {
     while (head != NULL) {
-        printf("%d ", head->element);
+        printf("%d->", head->element);
         head = head->next;
     }
     printf("\n");
